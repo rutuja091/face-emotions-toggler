@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expression Toggler</title>
+    <style>
+        body {
+            background-color: #D9AFD9;
+            background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+            min-height: 100vh;
+        }
+
+        .heading{
+            text-align: center;
+            color: #fff;
+        }
+
+        .container{
+            width: 400px;
+            height:300px;
+            background-color: #fff;
+            display: block;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+        }
+
+        .face {
+            width: 200px;
+            display: block;
+            margin: 10px auto;
+            margin-top:40px;
+        }
+
+        .buttons{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .btn {
+            font-size: 20px;
+            padding: 5px 20px;
+            border: none;
+            margin:  20px;
+            cursor: pointer;
+            background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+            color: #fff;
+            border-radius: 50px;
+          
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <h1 class="heading">Face Expression Toggle</h1>
+    <div class="container">
+        <img src="happy.png" class="face" alt="Image not found" id="face" />
+    </div>
+    <div class="buttons">
+        <button class="btn" onclick="toggle('happy')">Happy</button>
+        <button class="btn" onclick="toggle('sadness')">Sad</button>
+        <button class="btn" onclick="toggle('grinning')">Grinning</button>
+        <button class="btn" onclick="toggle('smiling-face')">Smiling-face </button>
+        <button class="btn" onclick="toggle('neutral')">Neutral</button>
+    </div>
+
+    <script>
+        function toggle(expression) {
+            document.getElementById("face").src =`${expression}.png`;
+        }
+    </script>
+</body>
+</html>
